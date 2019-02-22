@@ -1,0 +1,156 @@
+<html>
+	<head>  </head>
+		<style>
+			#fundo{
+			width:100%;
+			height:100%;
+			}
+			#contato{
+			background-color: #696969;
+			width:100%;
+			height:3%;
+			}
+			#imagem{
+			width: 100%;
+			height:22%;
+			position: relative;
+			text-align: center;
+			font-size:100px;
+			color: black;
+			}
+			#menu{
+			width:100%;
+			height:5%;
+			position:relative;
+			bottom:-150px;
+			}
+			p{
+			font-size:10px;
+			text-indent: 30px;
+			line-height: 1.4;
+			display: inline;
+			padding: 35px;
+		}
+		
+		ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		position: -webkit-sticky; 
+		position: sticky;
+		top: 0;
+		background-color:#F3F2E3;
+		}
+
+		li {
+		float: right;
+		}
+
+		li a {
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 5px 10px;
+		text-decoration: none;
+		}
+
+		li a:hover {
+		background-color: #F9E03F;
+		}
+		.ativo {
+		background-color: #F9E03F;
+		}
+		p a{
+		color: white;
+		text-decoration: none;
+		}
+		.myslide{
+		display:none;
+		}
+		img{
+		width: 100%;
+		height:300px;
+		 opacity: 0.8;
+		}
+		.meio {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		}
+		
+		#corpo{
+		height:100%;
+		width:100%;
+		position: relative;
+		top:24.7%;
+		}
+		#fim{
+		background-color:black;
+		height:30%;
+		width:100%;
+		position: relative;
+		}
+		h1{
+		color:white;
+		text-align: center;
+		}
+		.im{
+		width:100px;
+		height:100px;
+		position: center;
+		}
+		</style>
+	
+	
+	
+	<body>
+	 <div id="fundo">
+		<div id="contato">
+			<p><a href="contato.html">CONTATO</a></p>                 <p><a href="somos.html">QUEM SOMOS</a></p>                 <p><a href="colunistas">COLUNISTAS</a></p>
+		</div>
+		<div id="imagem">
+			<div class="meio">Arte in life </div>
+			<img class="mySlides" src="monet.jpg"  >
+			<img class="mySlides" src="monet2.jpg" >
+			<img class="mySlides" src="van.jpg" >
+		</div>
+		<div id="menu">
+			<ul>
+			<li> <a href="noticias.html"> Noticias </a></li>
+			<li> <a href="entrevistas.html"> Entrevistas </a></li>
+			<li> <a href="criticas.html"> Criticas </a></li>
+			<li> <a class="ativo" href="site.html"> Home </a></li>
+			</ul>
+		</div>
+		<div id="corpo">
+		
+		</div>
+		
+		<div id="fim">
+		<p><img class="im" src="download.png"  ></p>
+		<img class="im" src="insta1.png"  >
+		</div>
+	</div>
+
+	
+	<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); 
+}
+</script>
+
+	</body>
+</html>
